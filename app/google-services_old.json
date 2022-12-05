@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "587178306501",
+    "firebase_url": "https://verifikations-d652b-default-rtdb.firebaseio.com",
+    "project_id": "verifikations-d652b",
+    "storage_bucket": "verifikations-d652b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587178306501:android:0bd0979ad13235fcb4b9ac",
+        "android_client_info": {
+          "package_name": "com.gmail.pavlovsv93.verification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587178306501-t28ns77u16tl5m9h5j59of6ljvpbnur8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gmail.pavlovsv93.verification",
+            "certificate_hash": "e3becc20f6ab18eac8a64a803ff8a79946f3f265"
+          }
+        },
+        {
+          "client_id": "587178306501-vovsjklsear4jkllqaf5e278rgej639i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuF7vcVN7Ji0XFewF2jKTtitOBObXkEU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587178306501-vovsjklsear4jkllqaf5e278rgej639i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

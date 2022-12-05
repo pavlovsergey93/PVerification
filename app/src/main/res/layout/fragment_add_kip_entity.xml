@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:background="@color/white">
+
+	<androidx.core.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_margin="@dimen/_4dp"
+				android:orientation="vertical">
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilModel"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					android:hint="@string/model_title">
+
+				<AutoCompleteTextView
+						android:id="@+id/etModel"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="none" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilNumber"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					app:endIconMode="clear_text">
+
+				<androidx.appcompat.widget.AppCompatEditText
+						android:id="@+id/etNumber"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/number_title"
+						android:imeOptions="actionNext"
+						android:inputType="text" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilDate"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					app:endIconMode="clear_text">
+
+				<androidx.appcompat.widget.AppCompatEditText
+						android:id="@+id/etDate"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/date_title"
+						android:imeOptions="actionNext"
+						android:inputType="date" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilParameter"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					android:hint="@string/parameter_title">
+
+				<AutoCompleteTextView
+						android:id="@+id/etParameter"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="none" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+				<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/tilKeyStation"
+						style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="@dimen/_8dp"
+						android:layout_weight="2"
+						android:hint="@string/key_station_title">
+
+					<AutoCompleteTextView
+							android:id="@+id/etKeyStation"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:inputType="none" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/tilStation"
+						style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="@dimen/_8dp"
+						android:layout_weight="1"
+						android:hint="@string/station_title">
+
+					<AutoCompleteTextView
+							android:id="@+id/etStation"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:inputType="none" />
+				</com.google.android.material.textfield.TextInputLayout>
+			</LinearLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilPosition"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					app:endIconMode="clear_text">
+
+				<androidx.appcompat.widget.AppCompatEditText
+						android:id="@+id/etPosition"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/position_title"
+						android:imeOptions="actionNext"
+						android:inputType="text" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilDescription"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					app:endIconMode="clear_text">
+
+				<androidx.appcompat.widget.AppCompatEditText
+						android:id="@+id/etDescription"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/description_title"
+						android:imeOptions="actionNext"
+						android:inputType="textMultiLine"
+						android:maxLines="3" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilStatus"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					android:hint="@string/status_title">
+
+				<AutoCompleteTextView
+						android:id="@+id/etStatus"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="none" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilVerification"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					android:hint="@string/verification_title">
+
+				<AutoCompleteTextView
+						android:id="@+id/etVerification"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:inputType="none" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/tilInfo"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_8dp"
+					app:endIconMode="clear_text">
+
+				<androidx.appcompat.widget.AppCompatEditText
+						android:id="@+id/etInfo"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/info_title"
+						android:imeOptions="actionNext"
+						android:inputType="textMultiLine"
+						android:maxLines="3" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+				<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/btnSave"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginEnd="@dimen/_8dp"
+						android:layout_weight="1"
+						android:text="@string/save"
+						android:textStyle="bold" />
+
+				<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/btnExit"
+						style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="@dimen/_8dp"
+						android:layout_weight="1"
+						android:text="@string/exit" />
+			</LinearLayout>
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+	<ProgressBar
+			android:id="@+id/pbProgress"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:visibility="gone"
+			tools:visibility="visible"/>
+</FrameLayout>

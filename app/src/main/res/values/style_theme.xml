@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="themeVerification" parent="Theme.Verification">
+		<item name="colorTheme_50">@color/blue_grey_50</item>
+		<item name="colorTheme_100">@color/blue_grey_100</item>
+		<item name="colorTheme_200">@color/blue_grey_200</item>
+		<item name="colorTheme_300">@color/blue_grey_300</item>
+		<item name="colorTheme_400">@color/blue_grey_400</item>
+		<item name="colorTheme_500">@color/blue_grey_500</item>
+		<item name="colorTheme_600">@color/blue_grey_600</item>
+		<item name="colorTheme_700">@color/blue_grey_700</item>
+		<item name="colorTheme_800">@color/blue_grey_800</item>
+		<item name="colorTheme_900">@color/blue_grey_900</item>
+	</style>
+</resources>

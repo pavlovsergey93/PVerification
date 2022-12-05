@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+			android:id="@+id/listDevice"
+			android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+			android:title="@string/list_devices" />
+	<item
+			android:id="@+id/verification"
+			android:icon="@drawable/ic_baseline_schedule_send_24"
+			android:title="@string/verification" />
+	<item
+			android:id="@+id/returnDevices"
+			android:icon="@drawable/ic_baseline_widgets_24"
+			android:title="@string/return_devices" />
+</menu>

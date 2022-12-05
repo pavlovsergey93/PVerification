@@ -1,0 +1,22 @@
+<resources>
+	<!-- Base application theme. -->
+	<style name="Theme.Verification" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="android:statusBarColor">?colorTheme_400</item>
+		<item name="android:navigationBarColor">?colorTheme_500</item>
+		<item name="colorPrimary">?colorTheme_600</item>
+		<item name="colorOnPrimary">?colorTheme_50</item>
+		<item name="colorPrimaryContainer">?colorTheme_100</item>
+		<item name="colorOnPrimaryContainer">?colorTheme_900</item>
+		<item name="colorPrimaryInverse">?colorTheme_200</item>
+		<item name="colorSecondary">?colorTheme_600</item>
+		<item name="colorOnSecondary">?colorTheme_50</item>
+		<item name="colorSecondaryContainer">?colorTheme_100</item>
+		<item name="colorOnSecondaryContainer">?colorTheme_900</item>
+		<item name="colorTertiary">?colorTheme_600</item>
+		<item name="colorOnTertiary">?colorTheme_50</item>
+		<item name="colorTertiaryContainer">?colorTheme_100</item>
+		<item name="colorOnTertiaryContainer">?colorTheme_900</item>
+		<item name="colorPrimaryVariant">?colorTheme_700</item>
+		<item name="colorSecondaryVariant">?colorTheme_200</item>
+	</style>
+</resources>

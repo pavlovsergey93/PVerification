@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/cvItem"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="@dimen/_4dp"
+		android:layout_marginVertical="@dimen/_8dp"
+		app:cardCornerRadius="@dimen/_8dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+		<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/ivModel"
+				android:layout_width="@dimen/_60dp"
+				android:layout_height="@dimen/_60dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvModel"
+				android:layout_width="@dimen/_0dp"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/roboto_medium"
+				android:gravity="center"
+				android:hint="@string/model"
+				android:paddingStart="@dimen/_8dp"
+				android:textSize="@dimen/_16sp"
+				app:layout_constraintBottom_toTopOf="@id/tvParameter"
+				app:layout_constraintEnd_toStartOf="@id/tvNumber"
+				app:layout_constraintHorizontal_weight="1"
+				app:layout_constraintStart_toEndOf="@id/ivModel"
+				app:layout_constraintTop_toTopOf="@id/ivModel" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvNumber"
+				android:layout_width="@dimen/_0dp"
+				android:layout_height="@dimen/_0dp"
+				android:fontFamily="@font/roboto_medium"
+				android:hint="@string/model"
+				android:paddingStart="@dimen/_8dp"
+				android:textSize="@dimen/_16sp"
+				app:layout_constraintBottom_toTopOf="@id/tvNextData"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_weight="2"
+				app:layout_constraintStart_toEndOf="@id/tvModel"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvNextData"
+				android:layout_width="0dp"
+				android:layout_height="@dimen/_0dp"
+				android:fontFamily="@font/roboto_bold_italic"
+				android:gravity="center_vertical|end"
+				android:hint="@string/data"
+				android:paddingEnd="@dimen/_16dp"
+				android:textSize="@dimen/_16sp"
+				app:layout_constraintBottom_toTopOf="@id/tvLocation"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_weight="2"
+				app:layout_constraintStart_toEndOf="@id/tvData"
+				app:layout_constraintTop_toBottomOf="@id/tvNumber" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvData"
+				android:layout_width="@dimen/_0dp"
+				android:layout_height="@dimen/_0dp"
+				android:fontFamily="@font/roboto_bold_italic"
+				android:gravity="center"
+				android:hint="@string/data"
+				android:paddingEnd="@dimen/_16dp"
+				android:textSize="@dimen/_16sp"
+				app:layout_constraintBottom_toTopOf="@id/tvLocation"
+				app:layout_constraintEnd_toStartOf="@id/tvNextData"
+				app:layout_constraintHorizontal_weight="2"
+				app:layout_constraintStart_toEndOf="@id/tvModel"
+				app:layout_constraintTop_toBottomOf="@id/tvNumber" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvParameter"
+				android:layout_width="@dimen/_0dp"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/roboto_bold"
+				android:gravity="center"
+				android:hint="@string/data"
+				android:paddingEnd="@dimen/_16dp"
+				app:autoSizeMaxTextSize="@dimen/_16sp"
+				app:layout_constraintBottom_toBottomOf="@id/ivModel"
+				app:layout_constraintEnd_toStartOf="@id/tvData"
+				app:layout_constraintHorizontal_weight="2"
+				app:layout_constraintStart_toEndOf="@id/ivModel"
+				app:layout_constraintTop_toBottomOf="@id/tvModel" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvLocation"
+				android:layout_width="@dimen/_0dp"
+				android:layout_height="@dimen/_0dp"
+				android:fontFamily="@font/roboto_light_italic"
+				android:gravity="center_vertical|end"
+				android:hint="@string/data"
+				android:paddingEnd="@dimen/_16dp"
+				android:textSize="@dimen/_16sp"
+				app:layout_constraintBottom_toBottomOf="@id/ivModel"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_weight="2"
+				app:layout_constraintStart_toEndOf="@id/tvParameter"
+				app:layout_constraintTop_toBottomOf="@id/tvNextData" />
+
+		<View
+				android:id="@+id/viewStatus"
+				android:layout_width="@dimen/_8dp"
+				android:layout_height="@dimen/_0dp"
+				android:background="@color/black"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:background="#CC000000"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<View
+			android:layout_width="match_parent"
+			android:layout_height="1px"
+			android:layout_gravity="bottom" />
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/_16dp"
+		android:orientation="vertical"
+		android:padding="@dimen/_16dp">
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+			android:id="@+id/sAscendingDate"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/roboto_bold_italic"
+			android:padding="@dimen/_4dp"
+			android:text="@string/asc_date"
+			android:textSize="@dimen/_20sp" />
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+			android:id="@+id/sDescendingDate"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/roboto_bold_italic"
+			android:padding="@dimen/_4dp"
+			android:text="@string/desc_date"
+			android:textSize="@dimen/_20sp" />
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tilModel"
+			style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/_8dp"
+			android:hint="@string/model_title">
+
+		<AutoCompleteTextView
+				android:id="@+id/etModel"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:inputType="none" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tilStation"
+			style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/_8dp"
+			android:layout_weight="1"
+			android:hint="@string/station_title">
+
+		<AutoCompleteTextView
+				android:id="@+id/etStation"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:inputType="none" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tilParameter"
+			style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/_8dp"
+			android:hint="@string/parameter_title">
+
+		<AutoCompleteTextView
+				android:id="@+id/etParameter"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:inputType="none" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tilStatus"
+			style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/_8dp"
+			android:hint="@string/status_title">
+
+		<AutoCompleteTextView
+				android:id="@+id/etStatus"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:inputType="none" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"
+			android:orientation="horizontal">
+
+		<com.google.android.material.button.MaterialButton
+				android:id="@+id/btnCancelFilter"
+				style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginEnd="@dimen/_36dp"
+				android:text="@string/cancel" />
+
+		<com.google.android.material.button.MaterialButton
+				android:id="@+id/btnApplyFilter"
+				style="@style/Widget.MaterialComponents.Button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/apply" />
+
+	</LinearLayout>
+</LinearLayout>

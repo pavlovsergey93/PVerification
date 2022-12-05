@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" value="0.137" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.1985" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/activity_main.xml" value="0.2515625" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/activity_verification.xml" value="0.265625" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/edit_text_list_item.xml" value="0.11197916666666667" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_add_kip_entity.xml" value="0.176" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_auth.xml" value="0.176" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_bottom_sheet_filter.xml" value="0.2" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_details_device.xml" value="0.2" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_list_devices.xml" value="0.265625" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_remove_in_verification.xml" value="0.253125" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_waiting_device_item.xml" value="0.3253012048192771" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_waiting_for_return.xml" value="0.253125" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_waiting_item.xml" value="0.2" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/fragment_wating_item.xml" value="0.264" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/kip_entity_item.xml" value="0.28076923076923077" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/layout/kip_entity_item_remote.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyTestApp/Verification/app/src/main/res/menu/navigation.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

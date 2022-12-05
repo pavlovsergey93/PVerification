@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<attr name="colorTheme_50" format="color"/>
+	<attr name="colorTheme_100" format="color"/>
+	<attr name="colorTheme_200" format="color"/>
+	<attr name="colorTheme_300" format="color"/>
+	<attr name="colorTheme_400" format="color"/>
+	<attr name="colorTheme_500" format="color"/>
+	<attr name="colorTheme_600" format="color"/>
+	<attr name="colorTheme_700" format="color"/>
+	<attr name="colorTheme_800" format="color"/>
+	<attr name="colorTheme_900" format="color"/>
+</resources>

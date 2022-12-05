@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "587178306501",
+    "firebase_url": "https://verifikations-d652b-default-rtdb.firebaseio.com",
+    "project_id": "verifikations-d652b",
+    "storage_bucket": "verifikations-d652b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587178306501:android:0bd0979ad13235fcb4b9ac",
+        "android_client_info": {
+          "package_name": "com.gmail.pavlovsv93.verification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbn7PDAmLlZYfKxy_5u85pfgkqKx5ughs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
