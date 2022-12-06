@@ -15,9 +15,9 @@ import com.gmail.pavlovsv93.verification.ui.listdevices.ListDevicesFragment.Comp
 import com.gmail.pavlovsv93.verification.ui.remove.RemoveInVerificationFragment
 import com.gmail.pavlovsv93.verification.ui.waitreturn.WaitingForReturnFragment
 
-class VerificationFragment : Fragment() {
+class MainVerificationFragment : Fragment() {
 	companion object {
-		fun newInstance() = VerificationFragment()
+		fun newInstance() = MainVerificationFragment()
 	}
 
 	private var _binding: FragmentVerificationBinding? = null

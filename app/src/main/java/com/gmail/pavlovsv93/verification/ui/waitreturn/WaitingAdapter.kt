@@ -6,18 +6,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.gmail.pavlovsv93.verification.R
-import com.gmail.pavlovsv93.verification.data.realtime.entity.Entity
 import com.gmail.pavlovsv93.verification.data.realtime.utils.RealtimeDiffUtils
 import com.gmail.pavlovsv93.verification.databinding.FragmentWaitingItemBinding
+import com.gmail.pavlovsv93.verification.domain.KipEntity
+import com.gmail.pavlovsv93.verification.utils.dataFormat
 import com.gmail.pavlovsv93.verification.utils.setBackgroundStatus
 import com.gmail.pavlovsv93.verification.utils.setImageDevice
 
 class WaitingAdapter(private val click: WaitingForReturnFragment.OnClickOrSweep) :
 	RecyclerView.Adapter<WaitingAdapter.WaitingViewHolder>() {
 
-	private val listEntity: MutableList<Entity> = mutableListOf()
+	private val listEntity: MutableList<KipEntity> = mutableListOf()
 
-	fun setData(listData: List<Entity>) {
+	fun setData(listData: List<KipEntity>) {
 		val diffUtilCallback = RealtimeDiffUtils(listEntity, listData)
 		val diffResult = DiffUtil.calculateDiff(diffUtilCallback)
 		listEntity.clear()
@@ -26,16 +27,16 @@ class WaitingAdapter(private val click: WaitingForReturnFragment.OnClickOrSweep)
 	}
 
 	inner class WaitingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-		fun bind(entity: Entity) {
+		fun bind(entity: KipEntity) {
 			val binding = FragmentWaitingItemBinding.bind(itemView)
 			with(binding) {
 				ivModel.setImageResource(setImageDevice(entity.model))
 				tvModel.text = entity.model
 				tvNumber.text = entity.number
-				tvLocation.text = entity.location
+				tvLocation.text = "${entity.station} ${entity.position}"
 				val color: Int = setBackgroundStatus(entity.status)
 				viewStatus.setBackgroundResource(color)
-				tvNextData.text = entity.date
+				tvNextData.text = dataFormat(entity.nextDate)
 				tvParameter.text = entity.parameter
 				tvStatus.text = entity.status
 			}

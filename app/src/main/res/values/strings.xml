@@ -32,8 +32,8 @@
 	<string name="error_status">Текущий статус</string>
 	<string name="error_position">Укажите расположение прибора на объекте</string>
 	<string name="error_verification">Выберете периодичность поверки</string>
-	<string name="dialog_status_title">Текущий статус прибора?</string>
-	<string name="dialog_status_cancel">Отмена</string>
+	<string name="dialog_status_title">Прибор снят в поверку?</string>
+	<string name="dialog_status_cancel">Нет</string>
 	<string name="dialog_status_enter">Подтвердить</string>
 	<string name="dialog_date_title">Дата следующей поверки</string>
 	<string name="update">Обновить</string>
@@ -54,4 +54,7 @@
 	<string name="delete">Delete account</string>
 	<string name="title_delete">Удаление аккаунта!</string>
 	<string name="delete_button">Удалить</string>
+	<string name="dialog_status_yes">Да</string>
+    <string name="dialog_waiting_status_title">Результат поверки?</string>
+	<string name="dialog_waiting_status_title2">Текущее расположение?</string>
 </resources>

@@ -5,15 +5,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.gmail.pavlovsv93.verification.domain.DataSourceInterface
 import com.gmail.pavlovsv93.verification.domain.KipEntity
+import com.gmail.pavlovsv93.verification.domain.datasource.DevicesInterface
 import com.gmail.pavlovsv93.verification.utils.AppState
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class ListDeviceViewModel(
 	private val liveData: MutableLiveData<AppState>,
-	private val dataSource: DataSourceInterface
+	private val dataSource: DevicesInterface
 ) : ViewModel() {
 
 	fun getLiveData(): LiveData<AppState> = liveData
@@ -22,7 +22,7 @@ class ListDeviceViewModel(
 		try {
 			liveData.postValue(AppState.OnLoading(true))
 			viewModelScope.launch {
-				dataSource.getAllKipEntities()
+				dataSource.getAllKip()
 					.collect { result ->
 						if (!result.isEmpty()) {
 							Log.d("WWW viewModel", "${result}")
@@ -41,7 +41,7 @@ class ListDeviceViewModel(
 		try {
 			liveData.postValue(AppState.OnLoading(true))
 			viewModelScope.launch {
-				dataSource.getAllKipEntities()
+				dataSource.getAllKip()
 					.map { list ->
 						list.filter { item ->
 							item.model.contains(searchStr, true)
@@ -73,7 +73,7 @@ class ListDeviceViewModel(
 		try {
 			liveData.postValue(AppState.OnLoading(true))
 			viewModelScope.launch {
-				dataSource.getDataAsFilter(filter)
+				dataSource.getSearchListKip(filter)
 					.map { list ->
 						var listResultFilter: List<KipEntity> = list
 						filter.model?.let { parameterFilter ->

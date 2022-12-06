@@ -25,11 +25,7 @@ val statusListWaitingReturn by lazy {
 		STATUS_REJECTED
 	)
 }
-val statusListVerification by lazy {
-	arrayOf(
-		STATUS_REMOVED
-	)
-}
+
 const val CHECKED_ITEM = 1
 const val STATUS_INSTALLED = "Установлен"
 const val STATUS_REMOVED = "Снят в поверку"

@@ -6,14 +6,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gmail.pavlovsv93.verification.IS_SUCCESS
-import com.gmail.pavlovsv93.verification.domain.DataSourceInterface
+import com.gmail.pavlovsv93.verification.domain.datasource.EditorInterface
 import com.gmail.pavlovsv93.verification.utils.AppState
 import com.google.firebase.firestore.DocumentReference
 import kotlinx.coroutines.launch
 
 class AddOrUpdateKipEntityViewModel(
 	private val liveData: MutableLiveData<AppState>,
-	private val dataSource: DataSourceInterface
+	private val dataSource: EditorInterface
 ) : ViewModel() {
 
 	fun getLiveData() : LiveData<AppState> = liveData
@@ -21,7 +21,7 @@ class AddOrUpdateKipEntityViewModel(
 		liveData.postValue(AppState.OnLoading(true))
 		viewModelScope.launch {
 			try {
-				dataSource.addKipEntity(data).collect { result ->
+				dataSource.addKip(data).collect { result ->
 					liveData.postValue(AppState.OnLoading(false))
 					val id: String = (result as DocumentReference).path[1].toString()
 					if (!id.isNullOrEmpty()) {
@@ -39,18 +39,18 @@ class AddOrUpdateKipEntityViewModel(
 			}
 		}
 	}
-	fun updateDataDevice(idKip: String, data: Map<String, Any>) {
+	fun updateDataDevice(id: String, data: Map<String, Any>) {
 		viewModelScope.launch {
-			dataSource.updateDataDevice(idKip, data).collect { result ->
+			dataSource.updateKip(id, data).collect { result ->
 				liveData.postValue(AppState.OnShowMessage(result))
 			}
 		}
 	}
-	fun getItemKipEntities(idKip: String) {
+	fun getItemKipEntities(id: String) {
 		try {
 			liveData.postValue(AppState.OnLoading(true))
 			viewModelScope.launch {
-				dataSource.getItemKipEntities(idKip)
+				dataSource.getItemKip(id)
 					.collect { result ->
 						Log.d("WWW viewModel", "${result}")
 						liveData.postValue(AppState.OnSuccess(result))

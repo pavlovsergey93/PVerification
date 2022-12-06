@@ -34,11 +34,12 @@ class DetailsDeviceFragment : Fragment() {
 	private val binding get() = _binding!!
 	private val viewModel: DetailsViewModel by viewModel(named("DetailsViewModel"))
 	private var idKip: String? = null
+
 	override fun onCreateView(
 		inflater: LayoutInflater,
 		container: ViewGroup?,
 		savedInstanceState: Bundle?
-	): View? {
+	): View {
 		_binding = FragmentDetailsDeviceBinding.inflate(inflater, container, false)
 		return binding.root
 	}

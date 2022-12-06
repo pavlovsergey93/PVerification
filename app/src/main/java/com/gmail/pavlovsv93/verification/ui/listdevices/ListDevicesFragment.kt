@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentResultListener
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.firebase.ui.auth.AuthUI
 import com.gmail.pavlovsv93.verification.R
 import com.gmail.pavlovsv93.verification.databinding.FragmentListDevicesBinding
 import com.gmail.pavlovsv93.verification.domain.KipEntity
@@ -49,7 +48,7 @@ class ListDevicesFragment : Fragment() {
 		inflater: LayoutInflater,
 		container: ViewGroup?,
 		savedInstanceState: Bundle?
-	): View? {
+	): View {
 		_binding = FragmentListDevicesBinding.inflate(inflater, container, false)
 		return binding.root
 	}

@@ -15,7 +15,7 @@ import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.gmail.pavlovsv93.verification.R
 import com.gmail.pavlovsv93.verification.databinding.FragmentAuthBinding
 import com.gmail.pavlovsv93.verification.ui.VerificationActivity
-import com.gmail.pavlovsv93.verification.ui.verification.VerificationFragment
+import com.gmail.pavlovsv93.verification.ui.verification.MainVerificationFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -68,7 +68,7 @@ class AuthFragment : Fragment() {
 	private fun updateUI(user: FirebaseUser?) {
 		Toast.makeText(requireContext(), "Приветствую, ${user?.displayName}!", Toast.LENGTH_SHORT).show()
 		parentFragmentManager.beginTransaction()
-			.replace(R.id.fcContainerMain, VerificationFragment.newInstance())
+			.replace(R.id.fcContainerMain, MainVerificationFragment.newInstance())
 			.commit()
 	}
 

@@ -4,16 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.gmail.pavlovsv93.verification.data.realtime.RealtimeRepositoryInterface
-import com.gmail.pavlovsv93.verification.data.realtime.entity.Entity
-import com.gmail.pavlovsv93.verification.domain.DataSourceInterface
+import com.gmail.pavlovsv93.verification.domain.datasource.RemoteInterface
 import com.gmail.pavlovsv93.verification.utils.AppState
 import kotlinx.coroutines.launch
 
 class RemoveInVerificationViewModel(
-	private val liveData: MutableLiveData<AppState>,
-	private val dataSource: DataSourceInterface,
-	private val repository: RealtimeRepositoryInterface
+    private val liveData: MutableLiveData<AppState>,
+    private val dataSource: RemoteInterface
 ) : ViewModel() {
 	fun getLiveData(): LiveData<AppState> = liveData
 	fun getVerifiableDevices() {
@@ -35,17 +32,11 @@ class RemoveInVerificationViewModel(
 		}
 	}
 
-	fun updateDataDevice(idKip: String, data: Map<String, Any>) {
+	fun updateDataDevice(idKip: String, data: Map<String, Any?>) {
 		viewModelScope.launch {
-			dataSource.updateDataDevice(idKip, data).collect { result ->
+			dataSource.updateDate(idKip, data).collect { result ->
 				liveData.postValue(AppState.OnShowMessage(result))
 			}
-		}
-	}
-
-	fun addEntityRealtimeList(entity: Entity) {
-		viewModelScope.launch {
-			repository.addDevice(entity)
 		}
 	}
 }
