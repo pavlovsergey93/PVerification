@@ -14,16 +14,16 @@ const val COLLECTION = "verifications"
   					  -->Утилизирован
 */
 val statusListWaiting by lazy {
-	arrayOf(
-		STATUS_INSTALLED,
-		STATUS_SAVED
-	)
+    arrayOf(
+        STATUS_INSTALLED,
+        STATUS_SAVED
+    )
 }
 val statusListWaitingReturn by lazy {
-	arrayOf(
-		STATUS_FIT,
-		STATUS_REJECTED
-	)
+    arrayOf(
+        STATUS_FIT,
+        STATUS_REJECTED
+    )
 }
 
 const val CHECKED_ITEM = 1
@@ -41,19 +41,30 @@ const val STATUS_SAVED = "Хранение"
 const val STATUS_SAVE = "Длительное хранение"
 const val STATUS_ERROR = "Ошибка статуса"
 
-val statusList = listOf(
-	STATUS_NEW,
-	STATUS_INSTALLED,
-	STATUS_REMOVED,
-	STATUS_VERIFICATION,
-	STATUS_TRUSTED,
-	STATUS_REJECTED,
-	STATUS_FIX,
-	STATUS_REMOTE,
-	STATUS_WAIT_FIX,
-	STATUS_SAVED,
-	STATUS_SAVE
-)
+val correctStatusList by lazy {
+    arrayOf(
+        STATUS_REMOVED,
+        STATUS_VERIFICATION,
+        STATUS_REJECTED,
+        STATUS_FIT,
+        STATUS_FIX
+    )
+}
+val statusList by lazy {
+    arrayOf(
+        STATUS_NEW,
+        STATUS_INSTALLED,
+        STATUS_REMOVED,
+        STATUS_VERIFICATION,
+        STATUS_TRUSTED,
+        STATUS_REJECTED,
+        STATUS_FIX,
+        STATUS_REMOTE,
+        STATUS_WAIT_FIX,
+        STATUS_SAVED,
+        STATUS_SAVE
+    )
+}
 
 
 const val MODEL_SSS_07_08 = "ССС-903сл"
@@ -105,83 +116,83 @@ const val IS_SUCCESS = "Успешно!"
 const val IS_EXCEPTION = "Не известная ошибка!"
 
 val keyStation = listOf(
-	110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124,
-	209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223,
-	313, 314, 315, 316, 800, 900
+    110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124,
+    209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223,
+    313, 314, 315, 316, 800, 900
 )
 val station = listOf(
-	"Малиновка",
-	"Петровщина",
-	"Михалова",
-	"Грушевка",
-	"Институт культуры",
-	"Пл.Ленина",
-	"Октябрьская",
-	"Пл.Победы",
-	"Пл.Я.Коласа",
-	"Академия наук",
-	"Парк Челюскинцев",
-	"Московская",
-	"Восток",
-	"Борисовский тракт",
-	"Уручье",
-	"Могилевская",
-	"Автозаводская",
-	"Партизанская",
-	"Тракторный завод",
-	"Пролетарская",
-	"Первомайская",
-	"Купаловская",
-	"Немига",
-	"Фрунзенская",
-	"Молодежная",
-	"Пушкинская",
-	"Спортивная",
-	"Кунцевщина",
-	"Каменная горка",
-	"Ковальская Слобода",
-	"Вокзальная",
-	"Пл.Ф.Богушевича",
-	"Юбилейная Пл.",
-	"ЗЭП",
-	"Нет позиции"
+    "Малиновка",
+    "Петровщина",
+    "Михалова",
+    "Грушевка",
+    "Институт культуры",
+    "Пл.Ленина",
+    "Октябрьская",
+    "Пл.Победы",
+    "Пл.Я.Коласа",
+    "Академия наук",
+    "Парк Челюскинцев",
+    "Московская",
+    "Восток",
+    "Борисовский тракт",
+    "Уручье",
+    "Могилевская",
+    "Автозаводская",
+    "Партизанская",
+    "Тракторный завод",
+    "Пролетарская",
+    "Первомайская",
+    "Купаловская",
+    "Немига",
+    "Фрунзенская",
+    "Молодежная",
+    "Пушкинская",
+    "Спортивная",
+    "Кунцевщина",
+    "Каменная горка",
+    "Ковальская Слобода",
+    "Вокзальная",
+    "Пл.Ф.Богушевича",
+    "Юбилейная Пл.",
+    "ЗЭП",
+    "Нет позиции"
 )
 val verificationList = listOf(1, 2, 3, 4, 5, 6)
 val parameterList = listOf(
-	"CO - Оксид углерода",
-	"CO2 - Диоксид углерода",
-	"CH4 - Метан",
-	"Cl2 - Хлор",
-	"NH3 - Аммиак",
-	"H2SO4 - Серная кислота",
-	"HCl - Соляная кислота",
-	"Пыль",
-	"Температура",
-	"Влажность",
-	"Темп./Влажн.",
-	"Подвижность воздуха",
-	"Радиационный фон"
+    "CO - Оксид углерода",
+    "CO2 - Диоксид углерода",
+    "CH4 - Метан",
+    "Cl2 - Хлор",
+    "NH3 - Аммиак",
+    "H2SO4 - Серная кислота",
+    "HCl - Соляная кислота",
+    "Пыль",
+    "Температура",
+    "Влажность",
+    "Темп./Влажн.",
+    "Подвижность воздуха",
+    "Радиационный фон"
 )
 val modelList = listOf(
-	MODEL_SSS_07_08,
-	MODEL_SSS_08_14,
-	MODEL_SSS_ST,
-	MODEL_SSS_Mst,
-	MODEL_SSS_M,
-	MODEL_SSS_MT,
-	MODEL_GANK,
-	MODEL_DAK,
-	MODEL_DAH_M,
-	MODEL_TESTO_6621,
-	MODEL_TESTO_6651,
-	MODEL_TSPU,
-	MODEL_IPTV,
-	MODEL_PVT,
-	MODEL_DGS,
-	MODEL_TESTO_VELOSITY,
-	MODEL_SRPS,
-	MODEL_BDKG,
-	MODEL_AEROKON,
-	MODEL_TTM
+    MODEL_SSS_07_08,
+    MODEL_SSS_08_14,
+    MODEL_SSS_ST,
+    MODEL_SSS_Mst,
+    MODEL_SSS_M,
+    MODEL_SSS_MT,
+    MODEL_GANK,
+    MODEL_DAK,
+    MODEL_DAH_M,
+    MODEL_TESTO_6621,
+    MODEL_TESTO_6651,
+    MODEL_TSPU,
+    MODEL_IPTV,
+    MODEL_PVT,
+    MODEL_DGS,
+    MODEL_TESTO_VELOSITY,
+    MODEL_SRPS,
+    MODEL_BDKG,
+    MODEL_AEROKON,
+    MODEL_TTM
 )
 

@@ -39,7 +39,9 @@ class WaitingForReturnFragment : Fragment() {
         override fun onClick(entity: KipEntity) {
             when (entity.status) {
                 STATUS_REMOVED -> {
-                    status = STATUS_VERIFICATION
+                    data.clear()
+                    data[KEY_STATUS] = STATUS_VERIFICATION
+                    viewModel.updateKipEntity(entity.idKip, data)
                 }
                 STATUS_VERIFICATION -> {
                     showDialog(
@@ -48,15 +50,21 @@ class WaitingForReturnFragment : Fragment() {
                         getString(R.string.dialog_waiting_status_title)
                     )
                 }
-                else -> {
+                STATUS_TRUSTED -> {
                     showDialog(
                         entity,
                         statusListWaiting,
                         getString(R.string.dialog_waiting_status_title2)
                     )
                 }
+                else -> {
+                    showDialog(
+                        entity,
+                        correctStatusList,
+                        getString(R.string.dialog_waiting_status_title3)
+                    )
+                }
             }
-            viewModel.getAllEntity()
         }
     })
 
@@ -104,6 +112,7 @@ class WaitingForReturnFragment : Fragment() {
             }
             is AppState.OnShowMessage -> {
                 Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
+                viewModel.getAllEntity()
             }
         }
     }

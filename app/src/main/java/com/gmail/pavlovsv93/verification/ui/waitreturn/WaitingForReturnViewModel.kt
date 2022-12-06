@@ -38,7 +38,9 @@ class WaitingForReturnViewModel(
     fun updateKipEntity(id: String, data: Map<String, Any?>) {
         try {
             viewModelScope.launch {
-                dataSource.updateKip(id, data)
+                dataSource.updateKip(id, data).collect{ message ->
+                    liveData.postValue(OnShowMessage(message))
+                }
             }
         } catch (exception: Exception) {
             liveData.postValue(OnError(exception))

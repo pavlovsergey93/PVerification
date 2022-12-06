@@ -85,6 +85,7 @@ class RemoveInVerificationFragment : Fragment() {
                 adapter.setData(success)
             }
             is AppState.OnShowMessage -> {
+                viewModel.getVerifiableDevices()
                 Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
             }
         }

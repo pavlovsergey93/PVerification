@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.gmail.pavlovsv93.verification.R
-import com.gmail.pavlovsv93.verification.data.realtime.utils.RealtimeDiffUtils
+import com.gmail.pavlovsv93.verification.utils.RemoteDiffUtils
 import com.gmail.pavlovsv93.verification.databinding.FragmentWaitingItemBinding
 import com.gmail.pavlovsv93.verification.domain.KipEntity
 import com.gmail.pavlovsv93.verification.utils.dataFormat
@@ -19,7 +19,7 @@ class WaitingAdapter(private val click: WaitingForReturnFragment.OnClickOrSweep)
 	private val listEntity: MutableList<KipEntity> = mutableListOf()
 
 	fun setData(listData: List<KipEntity>) {
-		val diffUtilCallback = RealtimeDiffUtils(listEntity, listData)
+		val diffUtilCallback = RemoteDiffUtils(listEntity, listData)
 		val diffResult = DiffUtil.calculateDiff(diffUtilCallback)
 		listEntity.clear()
 		listEntity.addAll(listData)
@@ -36,7 +36,7 @@ class WaitingAdapter(private val click: WaitingForReturnFragment.OnClickOrSweep)
 				tvLocation.text = "${entity.station} ${entity.position}"
 				val color: Int = setBackgroundStatus(entity.status)
 				viewStatus.setBackgroundResource(color)
-				tvNextData.text = dataFormat(entity.nextDate)
+				tvNextData.text = dataFormat(entity.date)
 				tvParameter.text = entity.parameter
 				tvStatus.text = entity.status
 			}
