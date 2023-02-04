@@ -1,6 +1,7 @@
 package com.gmail.pavlovsv93.verification.ui.listdevices.adapter
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,9 +15,11 @@ import com.gmail.pavlovsv93.verification.utils.AppDiffUtil
 import com.gmail.pavlovsv93.verification.utils.dataFormat
 import com.gmail.pavlovsv93.verification.utils.setBackgroundStatus
 import com.gmail.pavlovsv93.verification.utils.setImageDevice
+import com.gmail.pavlovsv93.verification.utils.swipe.ItemTouchHelperAdapter
+import com.gmail.pavlovsv93.verification.utils.swipe.ItemTouchHelperViewHolder
 
 class ListAdapter(private val onClick: VerificationActivity.OnClickTheDevice) :
-	RecyclerView.Adapter<ListAdapter.ListDevicesViewHolder>() {
+	RecyclerView.Adapter<ListAdapter.ListDevicesViewHolder>(), ItemTouchHelperAdapter {
 	private val displayList: MutableList<KipEntity> = mutableListOf()
 	@SuppressLint("NotifyDataSetChanged")
 	fun setData(list: List<KipEntity>) {
@@ -27,7 +30,7 @@ class ListAdapter(private val onClick: VerificationActivity.OnClickTheDevice) :
 		diffResult.dispatchUpdatesTo(this)
 	}
 
-	inner class ListDevicesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+	inner class ListDevicesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), ItemTouchHelperViewHolder {
 		fun bind(data: KipEntity) {
 			val binding = KipEntityItemBinding.bind(itemView)
 			binding.cvItem.setOnClickListener {
@@ -45,6 +48,14 @@ class ListAdapter(private val onClick: VerificationActivity.OnClickTheDevice) :
 				tvInfo.text = data.info
 			}
 		}
+
+		override fun onItemSelected() {
+			itemView.setBackgroundColor(Color.LTGRAY)
+		}
+
+		override fun onItemClear() {
+			itemView.setBackgroundColor(0)
+		}
 	}
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListDevicesViewHolder {
@@ -59,4 +70,10 @@ class ListAdapter(private val onClick: VerificationActivity.OnClickTheDevice) :
 	}
 
 	override fun getItemCount(): Int = displayList.size
+
+	override fun onItemCorrect(position: Int) {
+		onClick.onSwipe(displayList[position])
+		notifyItemChanged(position)
+	}
+
 }

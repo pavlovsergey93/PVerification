@@ -2,7 +2,7 @@ package com.gmail.pavlovsv93.verification.data.devices
 
 import com.gmail.pavlovsv93.verification.domain.KipEntity
 import com.gmail.pavlovsv93.verification.domain.datasource.DevicesInterface
-import com.gmail.pavlovsv93.verification.ui.listdevices.FilterEntity
+import com.gmail.pavlovsv93.verification.ui.listdevices.bottomsheet.filter.FilterEntity
 import com.gmail.pavlovsv93.verification.utils.convertToKipEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

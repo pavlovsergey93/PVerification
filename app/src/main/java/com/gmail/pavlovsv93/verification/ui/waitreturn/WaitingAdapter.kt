@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.gmail.pavlovsv93.verification.R
-import com.gmail.pavlovsv93.verification.utils.RemoteDiffUtils
 import com.gmail.pavlovsv93.verification.databinding.FragmentWaitingItemBinding
 import com.gmail.pavlovsv93.verification.domain.KipEntity
+import com.gmail.pavlovsv93.verification.utils.RemoteDiffUtils
 import com.gmail.pavlovsv93.verification.utils.dataFormat
 import com.gmail.pavlovsv93.verification.utils.setBackgroundStatus
 import com.gmail.pavlovsv93.verification.utils.setImageDevice

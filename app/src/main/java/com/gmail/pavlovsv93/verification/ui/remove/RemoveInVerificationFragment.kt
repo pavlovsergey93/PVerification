@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gmail.pavlovsv93.verification.KEY_DATE
 import com.gmail.pavlovsv93.verification.KEY_STATUS
@@ -18,8 +19,10 @@ import com.gmail.pavlovsv93.verification.domain.KipEntity
 import com.gmail.pavlovsv93.verification.ui.VerificationActivity
 import com.gmail.pavlovsv93.verification.ui.listdevices.adapter.ListAdapter
 import com.gmail.pavlovsv93.verification.utils.AppState
+import com.gmail.pavlovsv93.verification.utils.swipe.ItemTouchHelperCallback
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.Timestamp
+import details.DetailsDeviceFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.qualifier.named
 
@@ -47,6 +50,13 @@ class RemoveInVerificationFragment : Fragment() {
                     dialog.dismiss()
                 }.show()
         }
+
+        override fun onSwipe(kipEntity: KipEntity) {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fcContainerMain, DetailsDeviceFragment.newInstance(kipEntity.idKip))
+                .addToBackStack(null)
+                .commit()
+        }
     })
 
     override fun onCreateView(
@@ -68,6 +78,7 @@ class RemoveInVerificationFragment : Fragment() {
         recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = adapter
+        ItemTouchHelper(ItemTouchHelperCallback(adapter)).attachToRecyclerView(recyclerView)
         viewModel.getVerifiableDevices()
     }
 

@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentResultListener
 import com.gmail.pavlovsv93.verification.R
 import com.gmail.pavlovsv93.verification.databinding.FragmentVerificationBinding
-import com.gmail.pavlovsv93.verification.ui.detailsdevice.DetailsDeviceFragment
-import com.gmail.pavlovsv93.verification.ui.listdevices.ListDevicesFragment
-import com.gmail.pavlovsv93.verification.ui.listdevices.ListDevicesFragment.Companion.ARG_ID_KIP
-import com.gmail.pavlovsv93.verification.ui.listdevices.ListDevicesFragment.Companion.KEY_ID_KIP
 import com.gmail.pavlovsv93.verification.ui.remove.RemoveInVerificationFragment
 import com.gmail.pavlovsv93.verification.ui.waitreturn.WaitingForReturnFragment
+import details.DetailsDeviceFragment
+import devices.ListDevicesFragment
+import devices.ListDevicesFragment.Companion.ARG_ID_KIP
+import devices.ListDevicesFragment.Companion.KEY_ID_KIP
 
 class MainVerificationFragment : Fragment() {
 	companion object {

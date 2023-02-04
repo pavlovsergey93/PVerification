@@ -1,6 +1,6 @@
 package com.gmail.pavlovsv93.verification.data.devices
 
-import com.gmail.pavlovsv93.verification.ui.listdevices.FilterEntity
+import com.gmail.pavlovsv93.verification.ui.listdevices.bottomsheet.filter.FilterEntity
 import com.google.firebase.firestore.DocumentSnapshot
 import kotlinx.coroutines.flow.Flow
 

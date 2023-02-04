@@ -1,4 +1,4 @@
-package com.gmail.pavlovsv93.verification.ui.addfragment
+package addfragment
 
 import android.os.Build
 import android.os.Bundle
@@ -47,7 +47,7 @@ class AddKipEntityFragment : Fragment() {
 		inflater: LayoutInflater,
 		container: ViewGroup?,
 		savedInstanceState: Bundle?
-	): View? {
+	): View {
 		_binding = FragmentAddKipEntityBinding.inflate(inflater, container, false)
 		val adapterModel = ArrayAdapter(requireContext(), R.layout.edit_text_list_item, modelList)
 		binding.etModel.setAdapter(adapterModel)

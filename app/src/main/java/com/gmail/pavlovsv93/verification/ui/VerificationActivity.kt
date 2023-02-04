@@ -19,6 +19,7 @@ class VerificationActivity : AppCompatActivity() {
 
 	interface OnClickTheDevice {
 		fun onClick(kipEntity: KipEntity)
+		fun onSwipe(kipEntity: KipEntity)
 	}
 
 	companion object {

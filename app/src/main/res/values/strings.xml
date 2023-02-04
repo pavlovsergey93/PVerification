@@ -58,4 +58,5 @@
     <string name="dialog_waiting_status_title">Результат поверки?</string>
 	<string name="dialog_waiting_status_title2">Текущее расположение?</string>
     <string name="dialog_waiting_status_title3">Скорректировать текущее состояние!</string>
+    <string name="btn_update_location">Обновить</string>
 </resources>

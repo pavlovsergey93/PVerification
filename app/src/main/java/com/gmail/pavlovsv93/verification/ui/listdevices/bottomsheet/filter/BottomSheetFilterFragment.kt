@@ -1,4 +1,4 @@
-package com.gmail.pavlovsv93.verification.ui.listdevices
+package com.gmail.pavlovsv93.verification.ui.listdevices.bottomsheet.filter
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import com.gmail.pavlovsv93.verification.*
 import com.gmail.pavlovsv93.verification.databinding.FragmentBottomSheetFilterBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import devices.ListDevicesFragment
 
 class BottomSheetFilterFragment : BottomSheetDialogFragment() {
 

@@ -1,4 +1,4 @@
-package com.gmail.pavlovsv93.verification.ui.detailsdevice
+package details
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,8 @@ import com.gmail.pavlovsv93.verification.R
 import com.gmail.pavlovsv93.verification.databinding.FragmentDetailsDeviceBinding
 import com.gmail.pavlovsv93.verification.domain.KipEntity
 import com.gmail.pavlovsv93.verification.ui.VerificationActivity
-import com.gmail.pavlovsv93.verification.ui.addfragment.AddKipEntityFragment
+import addfragment.AddKipEntityFragment
+import com.gmail.pavlovsv93.verification.ui.detailsdevice.DetailsViewModel
 import com.gmail.pavlovsv93.verification.utils.AppState
 import com.gmail.pavlovsv93.verification.utils.dataFormat
 import com.gmail.pavlovsv93.verification.utils.setBackgroundStatus
@@ -98,7 +99,7 @@ class DetailsDeviceFragment : Fragment() {
 			tvDescription.text = "Дополнительные сведенья:\n${device.description}\n\n Информация:\n ${device.info}"
 			binding.fabCorrect.setOnClickListener {
 				parentFragmentManager.beginTransaction()
-					.add(R.id.fcContainer,AddKipEntityFragment.updateInstance(device.idKip))
+					.add(R.id.fcContainer, AddKipEntityFragment.updateInstance(device.idKip))
 					.addToBackStack(null)
 					.commit()
 			}

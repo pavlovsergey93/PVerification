@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gmail.pavlovsv93.verification.domain.KipEntity
 import com.gmail.pavlovsv93.verification.domain.datasource.DevicesInterface
+import com.gmail.pavlovsv93.verification.ui.listdevices.bottomsheet.filter.FilterEntity
 import com.gmail.pavlovsv93.verification.utils.AppState
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.gmail.pavlovsv93.verification.ui.listdevices
+package com.gmail.pavlovsv93.verification.ui.listdevices.bottomsheet.filter
 
 import android.os.Parcel
 import android.os.Parcelable

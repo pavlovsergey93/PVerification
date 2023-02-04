@@ -4,7 +4,7 @@ import com.gmail.pavlovsv93.verification.COLLECTION
 import com.gmail.pavlovsv93.verification.KEY_NEXT_DATE
 import com.gmail.pavlovsv93.verification.KEY_POSITION
 import com.gmail.pavlovsv93.verification.KEY_STATION_KEY
-import com.gmail.pavlovsv93.verification.ui.listdevices.FilterEntity
+import com.gmail.pavlovsv93.verification.ui.listdevices.bottomsheet.filter.FilterEntity
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore

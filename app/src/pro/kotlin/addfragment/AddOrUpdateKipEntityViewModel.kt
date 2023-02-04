@@ -1,4 +1,4 @@
-package com.gmail.pavlovsv93.verification.ui.addfragment
+package addfragment
 
 import android.util.Log
 import androidx.lifecycle.LiveData
